@@ -8,9 +8,7 @@ import java.util.Map;
  * @author meihf
  *
  */
-public class ResponseMessage implements Serializable {
-
-	public  ResponseMessage(){};
+public class RestMessage implements Serializable {
 
 	private Map<String,Object> message;//消息内容 <消息标题，消息结果>
 	private boolean success;//做某事是否成功
@@ -31,9 +29,4 @@ public class ResponseMessage implements Serializable {
 		this.success = success;
 	}
 
-	@Override
-	public String toString() {
-		return "ResponseMessage [message=" + message + ", success=" + success + "]";
-	}
-	
 }
