@@ -24,10 +24,10 @@ public class Test {
         ApplicationContext ac =  new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
         UserDao userDAO = (UserDao)ac.getBean("userDAO");
         User user1 = new User();
-        user1.setId("1");
-        user1.setName("obama");
+        user1.setId("3");
+        user1.setName("obama3");
         userDAO.saveUser(user1);
-        User user2 = userDAO.getUser("1");
+        User user2 = userDAO.getUser("2");
         System.out.println(user2.getName());
     }
 

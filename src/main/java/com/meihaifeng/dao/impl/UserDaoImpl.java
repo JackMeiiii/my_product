@@ -10,6 +10,7 @@ import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
 
 import java.io.Serializable;
@@ -23,6 +24,7 @@ import java.util.List;
  * @date 2016/8/18
  * @description
  */
+@Repository
 public class UserDaoImpl extends AbstractBaseRedisDao<String,User> implements UserDao {
 
     @Autowired

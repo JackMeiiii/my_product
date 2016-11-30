@@ -15,8 +15,8 @@
     </context:component-scan>
     <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
         <property name="maxIdle" value="${redis.maxIdle}" />
-        <property name="maxActive" value="${redis.maxActive}" />
-        <property name="maxWait" value="${redis.maxWait}" />
+        <property name="maxTotal" value="${redis.maxTotal}" />
+        <property name="maxWaitMillis" value="${redis.maxWaitMillis}" />
         <property name="testOnBorrow" value="${redis.testOnBorrow}" />
     </bean>
 
@@ -25,9 +25,16 @@
 
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
         <property name="connectionFactory"   ref="connectionFactory" />
+        <property name="keySerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+        </property>
+        <property name="valueSerializer">
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>
+        </property>
     </bean>
 
-    <bean id="userDAO" class="com.meihaifeng.dao.impl.UserDaoImpl" />
+    <!--<bean id="userDAO" class="com.meihaifeng.dao.impl.UserDaoImpl" />-->
+    <bean id="redisCacheUtil" class="com.meihaifeng.util.RedisCacheUtil" />
 
     <import resource="classpath:data-source.xml" />
     <import resource="classpath:dispatcher-servlet.xml" />
