@@ -44,7 +44,7 @@ public class RedisCacheListener implements ApplicationListener<ContextRefreshedE
             User user = userService.getUserLog5();
 
             Map<Integer, Object> userMap = new HashMap<Integer, Object>();
-            userMap.put(1,user);
+            userMap.put(Integer.valueOf(1),user);
 
             redisCache.setCacheIntegerMap("user", userMap);
         }
