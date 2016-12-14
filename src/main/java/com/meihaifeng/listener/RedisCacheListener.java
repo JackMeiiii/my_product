@@ -37,7 +37,7 @@ public class RedisCacheListener implements ApplicationListener<ContextRefreshedE
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        //spring 启动的时候缓存城市和国家等信息
+        //spring 启动的时候缓存信息
         //event.getApplicationContext().getDisplayName().equals("Root WebApplicationContext"
         if (event.getApplicationContext().getParent()==null) {
             System.out.println("\n\n\n_________\n\n缓存数据 \n\n ________\n\n\n\n");
