@@ -20,12 +20,12 @@ public class ExportToExcel {
         List list1 = new ArrayList();
         List list2 = new ArrayList();
         for (int i=10;i<20;i++){
-            User user = new User(String.valueOf(i),"meihf","123");
+            User user = new User(String.valueOf(i),"meihf","密码");
             list1.add(user);
         }
 
         for (int ii = 0;ii<10;ii++){
-            User user = new User(String.valueOf(ii),"meihf","123");
+            User user = new User(String.valueOf(ii),"meihf","密码");
             list2.add(user);
         }
 
@@ -49,7 +49,7 @@ public class ExportToExcel {
         cell.setCellValue("密码");
         cell.setCellStyle(style);
 
-        for (int i = 0; i < list2.size(); i++)
+        for (int i = 0; i < list2.size()+list1.size(); i++)
         {
             if (i<list2.size()){
                 row = sheet.createRow((int) i + 1);
