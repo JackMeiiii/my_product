@@ -233,6 +233,11 @@
       <artifactId>hawtbuf</artifactId>
       <version>1.11</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.13</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>my-product</finalName>
