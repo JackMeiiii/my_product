@@ -73,7 +73,7 @@ public class ExportToExcel {
         // 第六步，将文件存到指定位置
         try
         {
-            FileOutputStream fout = new FileOutputStream("users3.xls");
+            FileOutputStream fout = new FileOutputStream("F:/doc/users2.xls");
             wb.write(fout);
             fout.close();
         }
