@@ -49,4 +49,5 @@
 
     <import resource="classpath:data-source.xml" />
     <import resource="classpath:dispatcher-servlet.xml" />
+    <import resource="dubbo-provider.xml" />
 </beans>

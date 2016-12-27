@@ -9,7 +9,7 @@ package com.meihaifeng.listener;
  */
 
 import com.meihaifeng.entity.User;
-import com.meihaifeng.service.UserServiceImpl;
+import com.meihaifeng.service.impl.UserServiceImpl;
 import com.meihaifeng.util.RedisCacheUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
