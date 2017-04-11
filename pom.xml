@@ -294,6 +294,21 @@
     </dependency>
     <!--dubbox机制-->
 
+    <!--爬虫机制-->
+    <dependency>
+      <groupId>edu.uci.ics</groupId>
+      <artifactId>crawler4j</artifactId>
+      <version>4.2</version>
+    </dependency>
+    <!--爬虫机制-->
+
+    <!--java ssh 操作服务器-->
+    <dependency>
+      <groupId>com.jcraft</groupId>
+      <artifactId>jsch</artifactId>
+      <version>0.1.53</version>
+    </dependency>
+    <!--java ssh 操作服务器-->
   </dependencies>
   <build>
     <finalName>my-product</finalName>

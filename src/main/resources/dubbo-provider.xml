@@ -20,7 +20,7 @@
     <!--使用multicast广播注册中心暴露服务地址 -->
     <!--<dubbo:registry address="multicast://115.159.110.67:1234" /> -->
     <dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
-    <!-- 配置监控的服务地址和IP-->
+    <!-- 配置监控的服务地址和IP-->d
     <dubbo:monitor address="115.159.110.67:8080"></dubbo:monitor>
     <!-- 发布这个服务 -->
     <dubbo:service connections="100" interface="com.meihaifeng.service.UserProviderService" protocol="dubbo" ref="userService" timeout="2000"></dubbo:service>
